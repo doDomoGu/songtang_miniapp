@@ -1,27 +1,35 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/oa/index",
+    "pages/user/index",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "颂唐机构",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
       "list": [
           {
             "pagePath": "pages/index/index",
-            "text": "颂唐"
+            "text": "颂唐",
+            "iconPath": "images/首页.png",
+            "selectedIconPath": "images/首页_2.png"
           },
           {
             "pagePath": "pages/oa/index",
-            "text": "OA"
+            "text": "OA",
+            "iconPath": "images/文档.png",
+            "selectedIconPath": "images/文档_2.png"
           },
           {
              "pagePath": "pages/user/index",
-             "text": "我"
+             "text": "我",
+             "iconPath": "images/用户.png",
+             "selectedIconPath": "images/用户_2.png"
            }
         ]
     }
