@@ -13,6 +13,20 @@ Page({
   },
   onShow:function(){
       var that = this;
+      wx.checkSession({
+          success: function(){
+              console.log(222);
+              //登录态未过期
+          },
+          fail: function(){
+              console.log(333)
+              //登录态过期
+              wx.login()
+          }
+      })
+
+
+
       app.getUcenterUserInfo(function(ucenterUserInfo){
             that.setData({
               ucenterUserInfo:ucenterUserInfo
