@@ -1,2 +1,5 @@
-<!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
+<view> 
+
+<text>{{ucenterUserInfo.name}}</text>
+
+</view>
