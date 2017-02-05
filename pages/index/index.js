@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-var app = getApp()
+var app = getApp();
 Page({
   data: {
     motto: 'Hello World',
@@ -13,30 +13,30 @@ Page({
     })
   },
   onLoad: function () {
-      wx.login({
-          success: function() {
-              wx.getUserInfo({
-                success: function (res) {
-                    console.log(res);
-
-                    // if (res.code) {
-                    //     console.log(res);
-                    //
-                    //     //发起网络请求
-                    //   /*wx.request({
-                    //    url: 'https://test.com/onLogin',
-                    //    data: {
-                    //    code: res.code
-                    //    }
-                    //    })*/
-                    // } else {
-                    //     console.log('获取用户登录态失败！' + res.errMsg)
-                    // }
-                }
-              })
-
-          }
-      });
+      // wx.login({
+      //     success: function() {
+      //         wx.getUserInfo({
+      //           success: function (res) {
+      //               console.log(res);
+      //
+      //               // if (res.code) {
+      //               //     console.log(res);
+      //               //
+      //               //     //发起网络请求
+      //               //   /*wx.request({
+      //               //    url: 'https://test.com/onLogin',
+      //               //    data: {
+      //               //    code: res.code
+      //               //    }
+      //               //    })*/
+      //               // } else {
+      //               //     console.log('获取用户登录态失败！' + res.errMsg)
+      //               // }
+      //           }
+      //         })
+      //
+      //     }
+      // });
 
 
     //console.log('onLoad')
@@ -53,8 +53,16 @@ Page({
     //   url: getApp().globalData.requestHost+'/site/sdadsadsa', //仅为示例，并非真实的接口地址
     //   data:{},
     //   header: {
+
+
+
+
+
     //       'content-type': 'application/json'
     //   },
+
+
+
     //   success: function(res) {
     //     console.log(res)
     //   }
