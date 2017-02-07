@@ -1,0 +1,19 @@
+/* pages/user/index.wxss */
+
+.usermotto {
+    color:red;
+    padding:10px;
+}
+
+.inputEle {
+    background: #e0e0e0;
+}
+
+.btnView {
+    padding:10px;
+}
+
+.errmsg {
+    height:30px;
+    color:red;
+}

@@ -1,0 +1,19 @@
+    <view class="container">
+      <view class="usermotto">
+        <text class="user-motto">颂唐机构 员工登录</text>
+        </view>
+        <view>
+        <text>用户名：</text>
+        <input class='inputEle' type="text" bindinput="usernameInput"/>
+        </view>
+        <view>
+        密码：
+        <input class='inputEle'type="text" bindinput="passwordInput" password="true"/>
+        </view>
+        <view class='errmsg'>
+        {{errmsg}}
+        </view>
+        <view class='btnView'>
+        <button bindtap="login">绑定颂唐机构账号 并登录</button>
+      </view>
+    </view>

@@ -40,6 +40,59 @@ App({
       }
 
   },
+    checkUcenterLogin:function(){
+        wx.navigateTo({
+            url: '../user/login'
+        })
+    },
+    checkLogin:function(){
+        var that = this;
+        wx.login({
+            success: function (res) {
+                //console.log(res);
+                // wx.getUserInfo({
+                //     success: function (res2) {
+                //         console.log(res2);
+                //     }/*,
+                //     fail:function (res32){
+                //         console.log('userinfo fail');
+                //         console.log(res32);
+                //     }*/
+                // });
+                var session_3rd = wx.getStorageSync('session_3rd');
+                //查看session_3rd是否存在
+                if(session_3rd!=''){
+                    //查看user_id是否存在
+                    var user_id = wx.getStorageSync('user_id');
+                    if(user_id!=''){
+                        wx.setStorageSync('ucenterUserInfo', {
+                            username :wx.getStorageSync('username'),
+                            name : wx.getStorageSync('name'),
+                            user_id :user_id
+                        });
+
+                    }else{
+                        //不存在 转去职员账号登录页面
+                        that.checkUcenterLogin();
+                    }
+                }else{
+                    //不存在，使用code 去获取openid session_key  最后返回3rd_session
+                    wx.request({
+                        url: that.globalData.requestHost+'/user/wx-get-3rd-session',
+                        data:{code:res.code},
+                        header: {
+                            'content-type': 'application/json'
+                        },
+                        success: function(res) {
+                            session_3rd = res.data.wx_get_3rd_session_response.result.session_3rd;
+                            wx.setStorageSync('session_3rd', session_3rd);
+                            that.checkUcenterLogin();
+                        }
+                    })
+                }
+            }
+        })
+    },
 
   // getUserInfo222:function(cb){
   //   var that = this

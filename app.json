@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/oa/index",
     "pages/user/index",
+    "pages/user/login",
     "pages/logs/logs"
   ],
   "window":{

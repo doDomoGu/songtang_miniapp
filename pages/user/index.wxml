@@ -1,5 +1,9 @@
-<view> 
+<view class='info-item'>
 
-<text>{{ucenterUserInfo.name}}</text>
+<text>ID：{{user_id}}</text>
+</view>
+
+<view class='info-item'>
+<text>姓名：{{name}}</text>
 
 </view>
