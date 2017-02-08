@@ -1,8 +1,8 @@
 var app = getApp();
 Page({
     data : {
-        username:'',
-        password:'',
+        username:'admin',
+        password:'123123',
         errmsg:''
     },
     onLoad:function(options){
@@ -79,7 +79,8 @@ Page({
                     wx.showToast({
                         title: '绑定成功',
                         icon: 'success',
-                        duration: 2000
+                        duration: 2000,
+                        mask:true
                     });
                     setTimeout(function(){
                         wx.navigateBack({

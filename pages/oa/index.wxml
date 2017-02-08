@@ -1,2 +1,16 @@
 
-<text>pages/oa/index.wxml</text>
+<view class='item-one'>
+待办事项
+</view>
+
+<view class='item-one'>
+办结事项
+</view>
+
+<view class='item-one'>
+完结事项
+</view>
+
+<view class='item-one'>
+相关事项
+</view>

@@ -215,13 +215,26 @@ Page({
                     wx.showToast({
                         title: '解绑成功',
                         icon: 'success',
-                        duration: 2000
+                        duration: 2000,
+                        mask: true,
+                        success:function(){
+                            wx.switchTab({
+                                url: '../index/index',
+                                success: function () {
+                                    console.log(getCurrentPages().pop());
+
+/*                                    var page = getCurrentPages().pop();
+                                    if (page == undefined || page == null) return;
+                                    page.onShow();*/
+                                }
+                            })
+                        }
                     });
-                    setTimeout(function(){
-                        wx.navigateTo({
-                            url: '../index/index'
-                        })
-                    },2000);
+                    // setTimeout(function(){
+                    //     wx.navigateTo({
+                    //         url: '../index/index'
+                    //     })
+                    // },2000);
                 }else{
                     console.log(res.data.error_response.msg);
                 }

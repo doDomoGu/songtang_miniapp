@@ -1,4 +1,7 @@
 /* pages/user/index.wxss */
+.container {
+    background: #fafafa;
+}
 
 .usermotto {
     color:red;
