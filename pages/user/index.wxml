@@ -7,3 +7,7 @@
 <text>姓名：{{name}}</text>
 
 </view>
+
+<view class='info-item'>
+<button type="warn" size="default" bindtap="unbindUcenter">账号解绑</button>
+</view>

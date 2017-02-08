@@ -1,8 +1,10 @@
 // pages/oa/index.js
-var app = getApp()
+var app = getApp();
 Page({
   data:{
-    
+      username:'',
+      name:'',
+      user_id:''
   },
   onLoad:function(options){
     app.common();
@@ -13,6 +15,12 @@ Page({
   },
   onShow:function(){
     // 页面显示
+      app.checkLogin();
+      this.setData({
+          username :wx.getStorageSync('username'),
+          name : wx.getStorageSync('name'),
+          user_id :wx.getStorageSync('user_id')
+      });
   },
   onHide:function(){
     // 页面隐藏

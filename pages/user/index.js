@@ -198,5 +198,34 @@ Page({
     },
     onUnload:function(){
     // 页面关闭
+    },
+    unbindUcenter:function(){
+        wx.request({
+            url: app.globalData.requestHost+'/user/wx-unbind-user',
+            data:{user_id:wx.getStorageSync('user_id'),session_3rd:wx.getStorageSync('session_3rd')},
+            header: {
+                'content-type': 'application/json'
+            },
+            success: function(res) {
+                if(res.data.wx_unbind_user_response){
+                    wx.setStorageSync('ucenterUserInfo', null);
+                    wx.setStorageSync('username', '');
+                    wx.setStorageSync('name',  '');
+                    wx.setStorageSync('user_id','');
+                    wx.showToast({
+                        title: '解绑成功',
+                        icon: 'success',
+                        duration: 2000
+                    });
+                    setTimeout(function(){
+                        wx.navigateTo({
+                            url: '../index/index'
+                        })
+                    },2000);
+                }else{
+                    console.log(res.data.error_response.msg);
+                }
+            }
+        })
     }
 });
