@@ -1,10 +1,11 @@
 var app = getApp();
 Page({
     data : {
-        username:'admin',
-        password:'123123',
+        username:'',
+        password:'',
         errmsg:''
     },
+
     onLoad:function(options){
 
     // 页面初始化 options为页面跳转所带来的参数
@@ -80,13 +81,13 @@ Page({
                         title: '绑定成功',
                         icon: 'success',
                         duration: 2000,
-                        mask:true
+                        mask:true,
+                        success:function(){
+                            wx.navigateBack({
+                                delta :1
+                            })
+                        }
                     });
-                    setTimeout(function(){
-                        wx.navigateBack({
-                            delta :1
-                        })
-                    },2000)
                 }else{
                     that.setData({'errmsg':res.data.error_response.msg});
                 }
