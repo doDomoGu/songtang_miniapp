@@ -27,5 +27,10 @@ Page({
   },
   onUnload:function(){
     // 页面关闭
-  }
+  },
+    toApplyNew:function(){
+        wx.navigateTo({
+            url:'../oa/apply/new'
+        })
+    }
 })

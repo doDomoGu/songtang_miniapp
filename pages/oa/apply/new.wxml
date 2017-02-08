@@ -1,0 +1,9 @@
+
+<view class="section">
+    <view class="section__title">申请模板选择</view>
+    <picker bindchange="bindTaskPickerChange" range-key="title" value="{{task_index}}" range="{{task_array}}">
+        <view class="picker">
+        当前选择：{{task_array[task_index].title}}
+        </view>
+    </picker>
+</view>

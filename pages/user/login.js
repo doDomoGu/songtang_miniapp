@@ -81,18 +81,23 @@ Page({
                         title: '绑定成功',
                         icon: 'success',
                         duration: 2000,
-                        mask:true,
-                        success:function(){
-                            wx.navigateBack({
-                                delta :1
-                            })
-                        }
+                        mask:true
                     });
+                    setTimeout(function(){
+                        wx.navigateBack({
+                            delta :1
+                        })
+                    },2000)
                 }else{
                     that.setData({'errmsg':res.data.error_response.msg});
                 }
 
             }
+        })
+    },
+    returnIndex:function(){
+        wx.switchTab({
+            url : '../index/index'
         })
     }
 });

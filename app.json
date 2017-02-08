@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/oa/index",
+    "pages/oa/apply/new",
     "pages/user/index",
     "pages/user/login",
     "pages/logs/logs"

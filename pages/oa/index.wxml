@@ -14,3 +14,10 @@
 <view class='item-one'>
 相关事项
 </view>
+
+
+<navigator class='item-one' url="../oa/apply/new" hover-class="navigator-hover">发起申请</navigator>
+
+<view class='item-one'>
+我的申请
+</view>

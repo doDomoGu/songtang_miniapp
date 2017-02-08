@@ -14,6 +14,9 @@
         {{errmsg}}
         </view>
         <view class='btnView'>
-        <button bindtap="login">绑定颂唐机构账号 并登录</button>
+        <button bindtap="login">登录（并绑定颂唐机构账号）</button>
+        </view>
+        <view>
+        <button bindtap="returnIndex">不登录（返回首页）</button>
       </view>
     </view>
