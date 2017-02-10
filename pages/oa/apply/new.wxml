@@ -1,9 +1,15 @@
 
 <view class="section">
-    <view class="section__title">申请模板选择</view>
+    <form bindsubmit="bindFormSubmit">
+    <view class="section">
+      <input placeholder="申请标题" auto-focus bindinput="bindTitleInput" />
+    </view>
     <picker bindchange="bindTaskPickerChange" range-key="title" value="{{task_index}}" range="{{task_array}}">
         <view class="picker">
-        当前选择：{{task_array[task_index].title}}
+        模板选择：{{task_array[task_index].title}}
         </view>
     </picker>
+    <textarea placeholder="内容说明" name="textarea" bindinput="bindMessageInput" />
+    <button form-type="submit"> 提交 </button>
+  </form>
 </view>
